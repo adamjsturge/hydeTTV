@@ -66,6 +66,12 @@ h1 {
     font-weight: 700;
 }
 
+h1 img {
+    display: block;
+    width: auto;
+    height: 2.25rem;
+}
+
 form {
     display: flex;
     flex-direction: column;

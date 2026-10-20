@@ -92,7 +92,9 @@ Not affiliated with or endorsed by Twitch or Patreon.
   chat, so they can't chat. It's the same exception a user could add in
   site settings. No other content setting is read or changed.
 - **storage:** Saves the user's settings (on/off, placement, theme, the
-  Twitch channel set per creator) and the chat panel's size and position.
+  Twitch channel set per creator), the floating panel's size and position,
+  the docked chat's width and the last tab picked (Patreon or Twitch).
+  Nothing leaves the browser except through the browser's own settings sync.
 - **Host permission (www.patreon.com):** Inserts the Twitch chat embed into
   Patreon event pages, and lets the toolbar popup read the current Patreon
   page's address to show which creator's channel is being set.
