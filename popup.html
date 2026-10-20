@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>hydeTTV</title>
+        <link rel="stylesheet" href="popup.css" />
+    </head>
+    <body>
+        <main>
+            <h1>hydeTTV</h1>
+
+            <section class="notice" id="access" hidden>
+                <p>
+                    hydeTTV needs access to patreon.com and twitch.tv to add
+                    the chat.
+                </p>
+                <button type="button" id="grant">Allow access</button>
+            </section>
+
+            <form novalidate>
+                <label class="row">
+                    <span>Show chat panel</span>
+                    <input type="checkbox" id="enabled" role="switch" />
+                </label>
+
+                <div class="field" id="channel-field" hidden>
+                    <label for="channel" id="channel-label">
+                        Twitch channel
+                    </label>
+                    <input
+                        id="channel"
+                        type="text"
+                        autocomplete="off"
+                        spellcheck="false"
+                        aria-describedby="channel-hint"
+                    />
+                    <p id="channel-hint" class="hint"></p>
+                </div>
+                <p class="hint" id="no-creator">
+                    Open a creator's Patreon page to set the Twitch channel for
+                    their streams. Each creator's channel is guessed from their
+                    Patreon name until you change it.
+                </p>
+
+                <fieldset class="field">
+                    <legend>Placement</legend>
+                    <div class="segmented">
+                        <label>
+                            <input type="radio" name="placement" value="dock" />
+                            <span>In Patreon chat</span>
+                        </label>
+                        <label>
+                            <input
+                                type="radio"
+                                name="placement"
+                                value="float"
+                            />
+                            <span>Floating</span>
+                        </label>
+                    </div>
+                    <p class="hint">
+                        In Patreon chat adds Patreon / Twitch tabs to the chat
+                        sidebar. Floats if the sidebar isn't showing.
+                    </p>
+                </fieldset>
+
+                <fieldset class="field">
+                    <legend>Chat theme</legend>
+                    <div class="segmented">
+                        <label>
+                            <input type="radio" name="theme" value="dark" />
+                            <span>Dark</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="theme" value="light" />
+                            <span>Light</span>
+                        </label>
+                    </div>
+                </fieldset>
+
+                <label class="row">
+                    <span>
+                        Show on every Patreon page
+                        <small>When off, only on event pages</small>
+                    </span>
+                    <input type="checkbox" id="all-pages" role="switch" />
+                </label>
+
+                <section class="field" id="saved" hidden>
+                    <h2>Saved channels</h2>
+                    <ul id="saved-list"></ul>
+                </section>
+
+                <button type="button" id="reset">
+                    Reset floating panel position
+                </button>
+            </form>
+
+            <p class="status" role="status" aria-live="polite"></p>
+
+            <footer>
+                <a
+                    href="https://patreon.com/stoige"
+                    target="_blank"
+                    rel="noopener"
+                    aria-label="Support hydeTTV on Patreon (opens in a new tab)"
+                >
+                    Support hydeTTV on Patreon
+                </a>
+            </footer>
+        </main>
+
+        <script src="shared.js"></script>
+        <script src="popup.js"></script>
+    </body>
+</html>

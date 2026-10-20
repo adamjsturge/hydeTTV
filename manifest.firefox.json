@@ -1,0 +1,46 @@
+{
+    "manifest_version": 3,
+    "name": "hydeTTV: Twitch chat for Patreon",
+    "short_name": "hydeTTV",
+    "version": "1.0.14",
+    "description": "Puts each creator's Twitch chat on their Patreon livestream pages.",
+    "homepage_url": "https://github.com/adamjsturge/hydeTTV",
+    "permissions": ["storage", "cookies"],
+    "host_permissions": ["https://*.twitch.tv/*", "https://www.patreon.com/*"],
+    "background": {
+        "scripts": ["background.firefox.js"]
+    },
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "hydettv@hydettv",
+            "strict_min_version": "140.0",
+            "data_collection_permissions": {
+                "required": ["none"]
+            }
+        },
+        "gecko_android": {
+            "strict_min_version": "142.0"
+        }
+    },
+    "icons": {
+        "16": "icons/icon16.png",
+        "32": "icons/icon32.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+    },
+    "action": {
+        "default_title": "hydeTTV",
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "icons/icon16.png",
+            "32": "icons/icon32.png"
+        }
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://www.patreon.com/*"],
+            "js": ["shared.js", "content.js"],
+            "run_at": "document_idle"
+        }
+    ]
+}
