@@ -1,0 +1,25 @@
+build.sh
+  s_9f0e095337c0ae::t_557a237fdaf14f 1-31
+content.js
+  s_9f0e095337c0ae::t_d09d02abfc4fc0 1-1089
+fonts/OFL.txt
+  s_9f0e095337c0ae::t_edb7dd76992876 1-93
+shared.js
+  s_9f0e095337c0ae::t_7b38071e8284e8 1-94
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "3a963dabdf469b779d9b5d8e3381768273a9866d",
+  "prompts": {},
+  "sessions": {
+    "s_9f0e095337c0ae": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "4f9ea052-352f-4045-8a6a-f8c98be4969c",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "adamjsturge <adamjsturge@gmail.com>"
+    }
+  }
+}
