@@ -121,7 +121,10 @@ The content script (`shared.js`, `content.js`) and popup are shared.
   Patreon tab.
 - **Build:** `./build.sh` (needs `jq` and `zip`) writes the store zips to
   `dist/` and an unpacked Firefox build to `dist/firefox/`. Both manifests
-  must have the same version.
+  must have the same version. `make build` runs the same script.
+- **Release:** `make bump` bumps the patch version in both manifests
+  (`PART=minor` or `PART=major` for the others); `make release` bumps, then
+  builds.
 - **Firefox:** run `./build.sh`, open `about:debugging#/runtime/this-firefox`,
   click **Load Temporary Add-on…** and pick `dist/firefox/manifest.json`.
   Temporary add-ons are removed when Firefox quits. Lint with
