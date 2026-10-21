@@ -1,0 +1,27 @@
+popup.html
+  s_e1ce037bf6edbd::t_fa0bada5f02854 114,116
+manifest.firefox.json
+  s_e1ce037bf6edbd::t_2bfe4641a1e3d4 5
+manifest.json
+  s_e1ce037bf6edbd::t_2bfe4641a1e3d4 5
+Makefile
+  s_e1ce037bf6edbd::t_c9c45e76540922 1-36
+README.md
+  s_e1ce037bf6edbd::t_b243d9d2b11535 124-127
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "ff71de662d6644ffcd513ae5f4a7cadf5eece52b",
+  "prompts": {},
+  "sessions": {
+    "s_e1ce037bf6edbd": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "2fbe0efe-a0bf-4c3e-acce-d356c54bd40c",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "adamjsturge <adamjsturge@gmail.com>"
+    }
+  }
+}
